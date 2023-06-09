@@ -20,7 +20,7 @@ function App() {
       [0, 3, 6],
       [2, 4, 6],
       [0, 4, 8],
-      [0, 3, 6]
+      [2, 5, 8]
   ]
     for(let i = 0; i <lines.length; i++) {
       const [a, b, c] = lines[i]
@@ -40,10 +40,10 @@ function App() {
         {squares.map((value, index) => {
           return (
             <Square
+            setSquares={setSquares}
             squares={squares}
             squareValue={value}
             index={index}
-            setSquares={setSquares}
             player={player}
             setPlayer={setPlayer}/>
           )
@@ -51,7 +51,7 @@ function App() {
     </div>
     <button onClick={handleClick}>Reset</button>
   </div>
-  );
-};
+  )
+}
 
 export default App;
